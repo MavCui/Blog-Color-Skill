@@ -10,7 +10,7 @@
 
 **Editorial covers for thoughtful writing.**
 
-A Codex skill that turns articles into original landscape cover art through ordinary-object metaphors, Chinese and Latin serif typography, and a disciplined two-ink print language. Designed for Feishu document headers and social article covers, with particular care for writing about AI, products, and ways of working.
+A Codex skill that turns articles into original landscape cover art through ordinary-object metaphors, Chinese and Latin serif typography, and a curated range of visual styles. Designed for Feishu document headers and social article covers, with particular care for writing about AI, products, and ways of working.
 
 One decisive image. A little tension. Enough paper to let it breathe.
 
@@ -134,7 +134,7 @@ In editorial print, the main ink normally carries about 80% of the printed marks
 
 ## Typography
 
-The presets include actual font files, not just a list of font names.
+The presets include actual font files, not just a list of font names. Swiss and structural styles also use Source Han Sans SC and Inter.
 
 | Preset | Chinese title | English title / subtitle | Use |
 |:---|:---|:---|:---|

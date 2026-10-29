@@ -13,7 +13,7 @@ class RenderTest(unittest.TestCase):
   (self.p/'recipe.json').write_text(json.dumps(r,ensure_ascii=False))
   return subprocess.run([sys.executable,str(SCRIPT),'--recipe',str(self.p/'recipe.json')],capture_output=True,text=True)
  def test_feishu_exact(self):
-  r=self.run_recipe();self.assertEqual(r.returncode,0,r.stderr);self.assertEqual(Image.open(self.p/'result.png').size,(2000,400));self.assertEqual(json.loads(r.stdout)['title_lines'],['上下文的边界'])
+  r=self.run_recipe();self.assertEqual(r.returncode,0,r.stderr);with_image=Image.open(self.p/'result.png');self.assertEqual(with_image.size,(2000,400));with_image.close();self.assertEqual(json.loads(r.stdout)['title_lines'],['上下文的边界'])
  def test_swiss_chinese(self):
   r=self.run_recipe(typography='swiss',title='结构与秩序',subtitle='Structure');self.assertEqual(r.returncode,0,r.stderr)
  def test_english_title_uses_latin_font(self):
@@ -22,6 +22,8 @@ class RenderTest(unittest.TestCase):
   r=self.run_recipe(title='上下文的边界'*100);self.assertNotEqual(r.returncode,0);self.assertFalse((self.p/'result.png').exists())
  def test_missing_glyph_fails(self):
   r=self.run_recipe(title='上下文 🦄');self.assertNotEqual(r.returncode,0);self.assertFalse((self.p/'result.png').exists())
+ def test_foreground_overlap_fails(self):
+  Image.new('RGBA',(2000,400),(0,0,0,255)).save(self.p/'fg.png');r=self.run_recipe(foreground='fg.png');self.assertNotEqual(r.returncode,0);self.assertIn('overlaps',r.stderr)
  def test_no_overwrite(self):
   (self.p/'result.png').write_bytes(b'preserve');r=self.run_recipe();self.assertNotEqual(r.returncode,0);self.assertEqual((self.p/'result.png').read_bytes(),b'preserve')
 if __name__=='__main__':unittest.main()

@@ -1,4 +1,4 @@
 interface:
   display_name: "Blog Color · 横屏封面"
-  short_description: "为飞书文档与社交媒体生成衬线字体、双色印刷与观念物件横屏封面"
+  short_description: "为飞书、博客与社交媒体推荐风格并生成横屏封面"
   default_prompt: "用 $editorial-wide-cover 把这篇文章做成有艺术感的飞书文档封面，使用预设中英衬线字体。"
