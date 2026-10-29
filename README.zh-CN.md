@@ -14,6 +14,63 @@
 
 一个明确的形态，一点意外的关系，留出能呼吸的纸面。
 
+## Blog Color v2 · 封面风格路由
+
+输入文章后，先获得三套完整方向：风格、色彩分工、字体、构图与文章隐喻。选择或混搭兼容方案后再生成；明确要求直接生成时跳过选择。
+
+八个原创风格模块：艺术印刷、瑞士字体、安静标本、纸艺静物、摄影编辑、受控拼贴、几何插画和结构图版。双色限制只属于艺术印刷；适合时优先使用衬线字体。
+
+正式封面先生成无字画面，再运行 `python3 scripts/render_cover.py --recipe recipe.json`，加载真实字体排版。依赖通过 `python3 -m pip install -r requirements-render.txt` 安装，[排版接口](references/rendering.md)含最小配方。裁切与视觉质量仍需人工核对，几何检查不能证明主体安全。
+
+支持飞书 5:1、2.35:1、16:9、2:1、博客 5:2 和 1200×630。飞书中央 580×240 参考官方建议，其他安全区是设计约定。旧版配色和字体 ID 仍可使用。
+
+## 三套提案示例
+
+以“上下文的边界”为例，路由可以给出：
+
+| | 风格与主图 | 配色 | 字体 | 布局 |
+|---|---|---|---|---|
+| A · 首推 | 艺术印刷：拉出的线 | `#FAFAF7` / `#2148B8` / `#C65F38` | 思源宋体＋Bodoni Moda | 大物件与留白标题区 |
+| B · 备选 | 瑞士字体：剪开的线 | `#FAFAF7` / `#202326` / `#C83232` | 思源黑体＋Inter | 非对称网格与有力标题 |
+| C · 探索 | 纸艺静物：折纸与连接线 | `#F5F1E8` / `#2148B8` / `#C65F38` | 思源宋体＋Bodoni Moda | 斜向主体与安静文字区 |
+
+下方为可复用的风格样图，不代表为新需求即时生成的结果。用户指定的文字与品牌色优先。
+
+## Eight directions / 八种方向
+
+### Editorial print / 艺术印刷
+
+![Editorial print / 艺术印刷](assets/examples/v2/editorial-print.png)
+
+### Swiss type / 瑞士字体
+
+![Swiss type / 瑞士字体](assets/examples/v2/swiss-type.png)
+
+### Quiet specimen / 安静标本
+
+![Quiet specimen / 安静标本](assets/examples/v2/quiet-specimen.png)
+
+### Paper sculpture / 纸艺静物
+
+![Paper sculpture / 纸艺静物](assets/examples/v2/paper-sculpture.png)
+
+### Photo editorial / 摄影编辑
+
+![Photo editorial / 摄影编辑](assets/examples/v2/photo-editorial.png)
+
+### Editorial collage / 受控拼贴
+
+![Editorial collage / 受控拼贴](assets/examples/v2/editorial-collage.png)
+
+### Geometric illustration / 几何插画
+
+![Geometric illustration / 几何插画](assets/examples/v2/geometric-illustration.png)
+
+### Structural plate / 结构图版
+
+![Structural plate / 结构图版](assets/examples/v2/structural-plate.png)
+
+
 ## 作品样例
 
 ### 协作的另一端
@@ -57,7 +114,7 @@ GitHub 项目名是 **Blog Color**，安装目录与调用名为 **`editorial-wi
 | **主图** | 一个普通物件，或两个存在明确关系的物件 |
 | **构图** | 一次大胆裁切、异常尺度或集中的双色交叠 |
 | **字体** | 中文宋体／明体与英文衬线，建立清晰的主次 |
-| **色彩** | 两块各有职责的油墨，保留可见纸面 |
+| **色彩** | 色彩分工跟随风格，艺术印刷使用两块油墨 |
 | **质感** | 线刻、网点、版色分离或克制的复印颗粒 |
 | **系列** | 稳定配色、字体系和间距，每篇换一个视觉想法 |
 
@@ -73,7 +130,7 @@ GitHub 项目名是 **Blog Color**，安装目录与调用名为 **`editorial-wi
 | **植物绿＋酒红** | `#008A4B` | `#8F3434` | `#FAFAF7` | 有触感和文化气质；关系与深度随笔 |
 | **炭黑＋信号红** | `#30343A` | `#C83232` | `#E9E9E5` | 锋利、有判断；评测与观点 |
 
-主墨通常占实际印刷标记的约 80%，辅墨负责一个有意义的局部：连接点、被留下的物件、选定的一次交叉。纸面不算第三块油墨。
+艺术印刷主墨通常占实际印刷标记的约 80%，辅墨负责一个有意义的局部：连接点、被留下的物件、选定的一次交叉。纸面不算第三块油墨。
 
 ## 中英衬线字体
 

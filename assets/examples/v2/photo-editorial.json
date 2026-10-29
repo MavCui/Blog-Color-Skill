@@ -1,0 +1,18 @@
+{
+  "format": "social-16x9",
+  "image": "photo-editorial-base.png",
+  "output": "photo-editorial.png",
+  "typography": "literary",
+  "title": "上下文的边界",
+  "subtitle": "The Shape of Context",
+  "color": "#FAFAF7",
+  "text_box": [
+    192,
+    180,
+    900,
+    560
+  ],
+  "title_size": 112,
+  "min_title_size": 65,
+  "subtitle_size": 42
+}

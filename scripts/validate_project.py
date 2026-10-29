@@ -86,6 +86,14 @@ def validate_presets_and_fonts():
             require(re.fullmatch(r'#[0-9A-Fa-f]{6}', palette[key]), f'Invalid color: {name}/{key}')
         require(palette['dominant'] != palette['accent'], f'Duplicate inks: {name}')
         require(sum(palette['printed_mark_ratio']) == 100, f'Invalid ink ratio: {name}')
+    require(len(presets.get('styles', {})) == 8, 'Expected eight style families')
+    for name, style in presets['styles'].items():
+        require(len(style['palettes']) == 3 and len(style['layouts']) == 2, f'Incomplete style: {name}')
+        require(style['typography'] in presets['typography'], f'Unknown typography: {name}')
+        require(all(x in presets['palettes'] for x in style['palettes']), f'Unknown palette: {name}')
+        require(all(x in presets['layouts'] for x in style['layouts']), f'Unknown layout: {name}')
+        require((ROOT / style['reference']).is_file(), f'Missing style guide: {name}')
+        require((ROOT / style['preview']).is_file(), f'Missing style preview: {name}')
     fonts = ROOT / 'assets/fonts'
     records = json.loads((fonts / 'manifest.json').read_text())
     seen = set()

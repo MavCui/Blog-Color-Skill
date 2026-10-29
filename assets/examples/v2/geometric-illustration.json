@@ -1,0 +1,18 @@
+{
+  "format": "social-16x9",
+  "image": "geometric-illustration-base.png",
+  "output": "geometric-illustration.png",
+  "typography": "editorial",
+  "title": "上下文的边界",
+  "subtitle": "The Shape of Context",
+  "color": "#233C56",
+  "text_box": [
+    1000,
+    130,
+    1728,
+    360
+  ],
+  "title_size": 95,
+  "min_title_size": 65,
+  "subtitle_size": 34
+}

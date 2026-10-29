@@ -1,0 +1,18 @@
+{
+  "format": "feishu",
+  "image": "paper-sculpture-base.png",
+  "output": "paper-sculpture-feishu.png",
+  "typography": "editorial",
+  "title": "上下文的边界",
+  "subtitle": "The Shape of Context",
+  "color": "#30343A",
+  "text_box": [
+    1020,
+    180,
+    1290,
+    320
+  ],
+  "title_size": 42,
+  "min_title_size": 36,
+  "subtitle_size": 20
+}

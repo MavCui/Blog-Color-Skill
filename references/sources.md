@@ -10,3 +10,5 @@
 - [IBM Plex Mono](https://github.com/google/fonts/tree/main/ofl/ibmplexmono)，Regular TTF。
 
 原版权与完整OFL许可在assets/fonts/；实际下载URL、字节数、SHA-256在manifest.json。不修改字体，不打包系统商业字体。模型字形外观接近与实际加载字体文件须明确区分。
+
+v2 还研究了 [wibi-style](https://github.com/Vieeeeeee/wibi-style)、[Phil Design Skills](https://github.com/FANzR-arch/Phil-design-skills) 与 [AI Visual Prompt Cookbook](https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook)。风格模块与说明为原创编写；不复制 wibi 非商业视觉指令或 Phil 未明确授权的指令与素材。参考构图须重建，保留必要来源与许可。

@@ -14,6 +14,63 @@ A Codex skill that turns articles into original landscape cover art through ordi
 
 One decisive image. A little tension. Enough paper to let it breathe.
 
+## Blog Color v2 · A cover design router
+
+Blog Color starts with an article and presents three complete directions: visual style, ink or color roles, typography, composition, and a subject metaphor. Select or combine compatible ideas before generating. A request to generate directly bypasses this step.
+
+Eight original style modules cover editorial print, Swiss type, quiet specimen, paper sculpture, photo editorial, controlled collage, geometric illustration, and structural plate. The two-ink rule belongs to editorial print; serif type remains the default where appropriate.
+
+For a production cover, generate a text-free visual and run `python3 scripts/render_cover.py --recipe recipe.json` with real bundled font files. Install dependencies with `python3 -m pip install -r requirements-render.txt`. The [rendering contract](references/rendering.md) contains a minimal recipe. Check cropping and visual quality yourself; geometry checks alone cannot verify the subject.
+
+Feishu 5:1, 2.35:1, 16:9, 2:1, blog 5:2 and 1200×630 presets are supported. Feishu's 580×240 central safe area follows the official recommendations; the other safe areas are design conventions. Existing palette and typography IDs remain valid.
+
+## Example: three directions
+
+For an essay on context boundaries, the router might propose:
+
+| | Style and image | Colors | Typography | Layout |
+|---|---|---|---|---|
+| A · Recommended | Editorial print: an unwinding thread | `#FAFAF7` / `#2148B8` / `#C65F38` | Source Han Serif SC + Bodoni Moda | oversized image and open title area |
+| B · Alternative | Swiss type: a cut thread | `#FAFAF7` / `#202326` / `#C83232` | Source Han Sans SC + Inter | asymmetric grid and strong type |
+| C · Exploratory | Paper sculpture: paper folds and a connecting strand | `#F5F1E8` / `#2148B8` / `#C65F38` | Source Han Serif SC + Bodoni Moda | diagonal object and quiet title field |
+
+These are reusable style studies, not images generated for a new request. User-specified text and brand colors take priority.
+
+## Eight directions / 八种方向
+
+### Editorial print / 艺术印刷
+
+![Editorial print / 艺术印刷](assets/examples/v2/editorial-print.png)
+
+### Swiss type / 瑞士字体
+
+![Swiss type / 瑞士字体](assets/examples/v2/swiss-type.png)
+
+### Quiet specimen / 安静标本
+
+![Quiet specimen / 安静标本](assets/examples/v2/quiet-specimen.png)
+
+### Paper sculpture / 纸艺静物
+
+![Paper sculpture / 纸艺静物](assets/examples/v2/paper-sculpture.png)
+
+### Photo editorial / 摄影编辑
+
+![Photo editorial / 摄影编辑](assets/examples/v2/photo-editorial.png)
+
+### Editorial collage / 受控拼贴
+
+![Editorial collage / 受控拼贴](assets/examples/v2/editorial-collage.png)
+
+### Geometric illustration / 几何插画
+
+![Geometric illustration / 几何插画](assets/examples/v2/geometric-illustration.png)
+
+### Structural plate / 结构图版
+
+![Structural plate / 结构图版](assets/examples/v2/structural-plate.png)
+
+
 ## Selected studies
 
 ### The Other End
@@ -40,7 +97,7 @@ git clone https://github.com/MavCui/Blog-Color-Skill.git \
 
 The repository name is **Blog Color**; the installed skill and invocation name are **`editorial-wide-cover`**. The root [SKILL.md](SKILL.md) is the entry point. If that destination already exists, update the existing installation instead of cloning over it.
 
-The skill is available on your next Codex turn. It uses the built-in image-generation capability when available; the default workflow does not require a separate image API key. Bundled fonts can be loaded directly by a typesetting tool without a system-wide font installation.
+The skill is available on your next Codex turn. It uses the built-in image-generation capability when available; the default image workflow does not require a separate image API key. Bundled fonts can be loaded directly by a typesetting tool without a system-wide font installation.
 
 Then ask:
 
@@ -57,7 +114,7 @@ Use the cobalt–terracotta palette and the preset Chinese/English serifs.
 | **Image** | One ordinary object, or two objects with a meaningful relationship |
 | **Composition** | A decisive crop, an unexpected scale, or one concentrated overprint |
 | **Type** | Chinese Song/Ming serifs and expressive Latin serifs, with deliberate hierarchy |
-| **Color** | Two inks with separate jobs; paper remains visible |
+| **Color** | Color roles follow the chosen style; editorial print uses two inks |
 | **Surface** | Etching, screening, plate separation, or restrained photocopy texture |
 | **Series** | Consistent ink, type, and spacing; a fresh visual idea for each article |
 
@@ -73,7 +130,7 @@ Read the [art direction](references/art-direction.md) for the full working rules
 | **Botanical + Oxblood** | `#008A4B` | `#8F3434` | `#FAFAF7` | Tactile and cultural; relationships and essays |
 | **Charcoal + Signal Red** | `#30343A` | `#C83232` | `#E9E9E5` | Direct and critical; evaluation and opinion |
 
-The main ink normally carries about 80% of the printed marks. The accent carries one meaningful event: a connecting point, a retained object, or a selected intersection. The paper is not a third ink.
+In editorial print, the main ink normally carries about 80% of the printed marks. The accent carries one meaningful event: a connecting point, a retained object, or a selected intersection. The paper is not a third ink.
 
 ## Typography
 

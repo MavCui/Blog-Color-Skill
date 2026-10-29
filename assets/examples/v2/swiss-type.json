@@ -1,0 +1,18 @@
+{
+  "format": "social-16x9",
+  "image": "swiss-type-base.png",
+  "output": "swiss-type.png",
+  "typography": "swiss",
+  "title": "上下文的边界",
+  "subtitle": "The Shape of Context",
+  "color": "#30343A",
+  "text_box": [
+    650,
+    130,
+    1380,
+    360
+  ],
+  "title_size": 95,
+  "min_title_size": 65,
+  "subtitle_size": 34
+}

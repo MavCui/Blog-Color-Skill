@@ -14,6 +14,8 @@ checksums.
 - Bodoni Moda: `bodonimoda-OFL.txt`
 - Cormorant Garamond: `cormorantgaramond-OFL.txt`
 - IBM Plex Mono: `ibmplexmono-OFL.txt`
+- Source Han Sans SC: `SourceHanSans-OFL.txt`
+- Inter: `inter-OFL.txt`
 
 ## Generated project imagery
 

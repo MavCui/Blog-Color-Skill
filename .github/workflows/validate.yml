@@ -19,3 +19,7 @@ jobs:
           persist-credentials: false
       - name: Validate files, resources, and inspector behavior
         run: python3 scripts/validate_project.py
+      - name: Install rendering dependencies
+        run: python3 -m pip install -r requirements-render.txt
+      - name: Test exact typography and output
+        run: python3 -m unittest discover -s tests -v
