@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "defaults": {"palette": "cobalt-terracotta", "typography": "editorial", "format": "social-wide"},
+  "palettes": {
+    "cobalt-terracotta": {"substrate": "#FAFAF7", "dominant": "#2148B8", "accent": "#C65F38", "printed_mark_ratio": [80, 20]},
+    "botanical-oxblood": {"substrate": "#FAFAF7", "dominant": "#008A4B", "accent": "#8F3434", "printed_mark_ratio": [80, 20]},
+    "charcoal-red": {"substrate": "#E9E9E5", "dominant": "#30343A", "accent": "#C83232", "printed_mark_ratio": [80, 20]}
+  },
+  "formats": {
+    "feishu": {"size": [2000, 400], "safe_rect": [710, 80, 1290, 320], "official_spec": true, "max_bytes": 20000000, "preferred_bytes": 5000000},
+    "social-wide": {"size": [2350, 1000], "safe_rect": [282, 120, 2068, 880], "official_spec": false, "max_bytes": 20000000, "preferred_bytes": 5000000},
+    "social-16x9": {"size": [1920, 1080], "safe_rect": [192, 130, 1728, 950], "official_spec": false, "max_bytes": 20000000, "preferred_bytes": 5000000},
+    "social-2x1": {"size": [2000, 1000], "safe_rect": [240, 120, 1760, 880], "official_spec": false, "max_bytes": 20000000, "preferred_bytes": 5000000}
+  },
+  "typography": {
+    "editorial": {"zh": {"family": "Source Han Serif SC", "weight": 600, "file": "SourceHanSerifSC-SemiBold.otf"}, "en": {"family": "Bodoni Moda", "weight": 500, "style": "normal", "file": "BodoniModa[opsz,wght].ttf"}},
+    "literary": {"zh": {"family": "Source Han Serif SC", "weight": 600, "file": "SourceHanSerifSC-SemiBold.otf"}, "en": {"family": "Cormorant Garamond", "weight": 500, "style": "italic", "file": "CormorantGaramond-Italic[wght].ttf"}},
+    "critical": {"zh": {"family": "Source Han Serif SC", "weight": 600, "file": "SourceHanSerifSC-SemiBold.otf"}, "en": {"family": "Bodoni Moda", "weight": 600, "style": "normal", "file": "BodoniModa[opsz,wght].ttf"}}
+  },
+  "utility_font": {"family": "IBM Plex Mono", "weight": 400, "file": "IBMPlexMono-Regular.ttf", "optional": true}
+}
