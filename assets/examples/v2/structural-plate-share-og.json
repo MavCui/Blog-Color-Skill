@@ -5,5 +5,14 @@
   "typography": "swiss",
   "title": "上下文的边界",
   "subtitle": "The Shape of Context",
-  "color": "#233C56"
+  "color": "#233C56",
+  "text_box": [
+    144,
+    76,
+    650,
+    220
+  ],
+  "title_size": 50,
+  "min_title_size": 37,
+  "subtitle_size": 20
 }
